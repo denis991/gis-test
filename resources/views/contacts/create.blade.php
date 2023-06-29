@@ -1,7 +1,7 @@
-<h1>Создать контакт</h1>
+<h1>Создать новый контакт</h1>
 
 @if ($errors->any())
-    <div>
+    <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -14,15 +14,15 @@
     @csrf
     <div>
         <label for="name">Имя:</label>
-        <input type="text" id="name" name="name" value="{{ old('name') }}" required>
+        <input type="text" name="name" id="name" value="{{ old('name') }}">
     </div>
     <div>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="{{ old('email') }}" required>
+        <input type="email" name="email" id="email" value="{{ old('email') }}">
     </div>
     <div>
         <label for="phone">Телефон:</label>
-        <input type="text" id="phone" name="phone" value="{{ old('phone') }}" required>
+        <input type="text" name="phone" id="phone" value="{{ old('phone') }}">
     </div>
     <div>
         <button type="submit">Сохранить</button>
