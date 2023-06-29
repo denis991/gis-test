@@ -1,0 +1,33 @@
+{
+	"name": "gis-test",
+	"description": "",
+	"version": "0.0.1",
+	"private": true,
+	"author": {
+		"name": "Denis Gutsuliak",
+		"email": "d.99113@gmail.com",
+		"url": "https://t.me/d9911/"
+	},
+	"contributors": [
+		{
+			"name": "Denis Gutsuliak",
+			"email": "d.99113@gmail.com",
+			"url": "https://t.me/d9911/"
+		}
+	],
+	"scripts": {
+		"dev": "npm run development",
+		"development": "mix",
+		"watch": "mix watch",
+		"watch-poll": "mix watch -- --watch-options-poll=1000",
+		"hot": "mix watch --hot",
+		"prod": "npm run production",
+		"production": "mix --production"
+	},
+	"devDependencies": {
+		"axios": "^0.21",
+		"laravel-mix": "^6.0.6",
+		"lodash": "^4.17.19",
+		"postcss": "^8.1.14"
+	}
+}
