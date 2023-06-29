@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-
-// Route::resource('contacts', ContactController::class);
-// app/Http/Controllers/ContactController.php;
 use App\Http\Controllers\ContactController;
 
 Route::get('/contacts', [ContactController::class, 'index']);

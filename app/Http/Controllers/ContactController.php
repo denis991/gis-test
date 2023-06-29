@@ -20,15 +20,15 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->validate([
+        $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
         ]);
 
-        Contact::create($data);
+        Contact::create($request->all());
 
-        return redirect('/contacts')->with('success', 'Контакт успешно создан.');
+        return redirect('/contacts')->with('success', 'Contact created successfully.');
     }
 
     public function edit(Contact $contact)
@@ -38,21 +38,21 @@ class ContactController extends Controller
 
     public function update(Request $request, Contact $contact)
     {
-        $data = $request->validate([
+        $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
         ]);
 
-        $contact->update($data);
+        $contact->update($request->all());
 
-        return redirect('/contacts')->with('success', 'Контакт успешно обновлен.');
+        return redirect('/contacts')->with('success', 'Contact updated successfully.');
     }
 
     public function destroy(Contact $contact)
     {
         $contact->delete();
 
-        return redirect('/contacts')->with('success', 'Контакт успешно удален.');
+        return redirect('/contacts')->with('success', 'Contact deleted successfully.');
     }
 }
