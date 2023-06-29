@@ -1,7 +1,7 @@
 @extends('contacts')
 
-@section('content')
-    <h1>Список контактов</h1>
+@section('contacts')
+    @section('h1', 'Список контактов')
 
     @if (session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>

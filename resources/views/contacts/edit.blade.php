@@ -1,7 +1,7 @@
 @extends('contacts')
 
-@section('content')
-    <h1>Редактировать контакт</h1>
+@section('contacts')
+    @section('h1', 'Редактировать контакт')
 
     @if ($errors->any())
         <div class="alert alert-danger">

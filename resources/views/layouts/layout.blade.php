@@ -20,7 +20,9 @@
         </ul>
     </header>
     <div class="content">
-        @yield('content')
+        {{-- @yield('content') --}}
+        @section('content')
+        @show
     </div>
 
 
