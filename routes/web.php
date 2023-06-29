@@ -2,11 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
-// Route::resource('contacts', ContactController::class);
 
+Route::get('/', function () {
+    return view('home');
+});
 
-// Route::get('/', [ContactController::class, 'index']);
-Route::redirect('/', '/contacts');
+Route::get('/contacts', function () {
+    return view('contacts');
+});
+// Route::redirect('/', '/contacts');
 
 Route::get('/contacts', [ContactController::class, 'index']);
 Route::get('/contacts/create', [ContactController::class, 'create']);
@@ -16,6 +20,6 @@ Route::put('/contacts/{contact}', [ContactController::class, 'update']);
 Route::delete('/contacts/{contact}', [ContactController::class, 'destroy']);
 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/welcome', function () {
+    return view('welcome');
+});
